@@ -23,7 +23,7 @@
     </parent>
 
     <dependencies>
-	
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
@@ -33,8 +33,8 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-		
-		<dependency>
+
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
@@ -49,7 +49,7 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>${lombok.version}</version>
-			<optional>true</optional>
+            <optional>true</optional>
         </dependency>
 
     </dependencies>
@@ -70,5 +70,5 @@
             </plugin>
         </plugins>
     </build>
-	
+
 </project>
