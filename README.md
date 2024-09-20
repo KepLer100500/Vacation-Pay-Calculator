@@ -1,13 +1,8 @@
-curl -X GET "http://localhost:8989/api/v1/calculate?averageSalary=50000&vacationDays=14" -u "user:neoflex"
+For test:
+curl -X GET "http://localhost:8989/api/v1/calculate?averageSalary=60000&vacationDays=7&startDate=2024-03-04&endDate=2024-03-10" -u "user:neoflex"
+curl -X GET "http://localhost:8989/api/v1/calculate?averageSalary=60000&vacationDays=7" -u "user:neoflex"
 
-curl -G "http://localhost:8989/api/v1/calculate" -u "user:neoflex" \
---data-urlencode "averageSalary=50000" \
---data-urlencode "vacationDays=14"
+For prod:
 
-curl -X GET "http://localhost:8989/api/v1/calculate?averageSalary=50000&vacationDays=14&startDate=2023-09-01&endDate=2023-09-15" -u "user:neoflex"
-
-curl -G "http://localhost:8989/api/v1/calculate" -u "user:neoflex" \
---data-urlencode "averageSalary=50000" \
---data-urlencode "vacationDays=14" \
---data-urlencode "startDate=2023-09-01" \
---data-urlencode "endDate=2023-09-15"
+curl -X GET "http://kepler-developer.ru:8989/api/v1/calculate?averageSalary=60000&vacationDays=7&startDate=2024-03-04&endDate=2024-03-10" -u "user:neoflex"
+curl -X GET "http://kepler-developer.ru:8989/api/v1/calculate?averageSalary=60000&vacationDays=7" -u "user:neoflex"
