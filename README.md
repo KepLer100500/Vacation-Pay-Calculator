@@ -1,3 +1,6 @@
+## Калькулятор отпускных
+<img src="https://img.shields.io/github/actions/workflow/status/KepLer100500/Vacation-Pay-Calculator/main.yml?style=plastic&logo=spring&logoColor=green&label=Tests">
+
 ### Usage
 
 #### For test:
