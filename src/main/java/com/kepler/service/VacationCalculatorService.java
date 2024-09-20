@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
+import java.util.stream.Collectors;
 
 @Service
 @Slf4j
@@ -36,7 +37,7 @@ public class VacationCalculatorService {
      */
     private int calculateActualVacationDays(LocalDate startDate, LocalDate endDate) {
         int workedDays = 0;
-        for (LocalDate date : startDate.datesUntil(endDate.plusDays(1)).toList()) { // make list dates between start and end vacation
+        for (LocalDate date : startDate.datesUntil(endDate.plusDays(1)).collect(Collectors.toList())) { // make list dates between start and end vacation
             if (!dayOffProxy.isDayOff(date)) { // don't count weekends or holidays
                 workedDays++;
             }
