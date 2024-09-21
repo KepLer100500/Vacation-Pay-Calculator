@@ -15,11 +15,18 @@ public class VacationCalculatorService {
     @Autowired
     private DayOffProxy dayOffProxy;
 
+    @Autowired
+    private ValidatorService validatorService;
+
     /**
      * @param request salary, days, start / end vacation
      * @return cash for vacation
      */
-    public double calculateVacationPay(VacationRequest request) {
+    public Double calculateVacationPay(VacationRequest request) {
+        if(!validatorService.isRequestCorrect(request)) { // if validation input parameters is failed - don't need to calculate
+            return null;
+        }
+
         double dailySalary = request.getAverageSalary() / 29.3; // average salary
         int totalVacationDays = request.getVacationDays();
 

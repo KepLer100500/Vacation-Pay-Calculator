@@ -6,5 +6,5 @@ import lombok.Data;
 @Data
 @Builder
 public class VacationResponse {
-    private double totalPay;
+    private Double totalPay;
 }
